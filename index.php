@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <title>Générateur de mot de passe</title>
+    <title>Generator</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 </body>
 
 <footer class="footer">
-    © 2025 GénérateurDeMotDePasse. Tous droits réservés.
+    © 2025 Generator. Tous droits réservés.
 </footer>
 
 </html>
