@@ -28,7 +28,7 @@
                     <label class="text">Chiffres <input type="checkbox" name="chiffres" checked></label><br>
                     <label class="text">Symboles <input type="checkbox" name="symboles" checked></label><br><br>
 
-                    <button type="submit">Envoyer</button>
+                    <button class="button">Envoyer</button>
                 </div>
             </div>
         </form>
@@ -38,14 +38,12 @@
         </div>
 
 
-
-
     </main>
 
 </body>
 
-<footer>
-
+<footer class="footer">
+    © 2025 GénérateurDeMotDePasse. Tous droits réservés.
 </footer>
 
 </html>

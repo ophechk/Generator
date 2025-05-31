@@ -22,7 +22,7 @@ p.form{
 }
 
 p.resultat{
-
+    font-size: 20px;
 }
 
 label.text{
@@ -57,6 +57,29 @@ div.resultat{
   text-align: center;
 }
 
-button{
 
+.footer {
+  background-color: #154789;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 16px;
+}
+
+/* From Uiverse.io by zjssun */ 
+.button {
+  display: block;     
+  margin: 0 auto;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #154789;
+  transition: all 0.2s ease;
+  text-align: center;  
+}
+
+.button:hover {
+  background-color: #0d2e5a; /* couleur un peu plus foncée au hover */
 }
