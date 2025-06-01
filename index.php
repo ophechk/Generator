@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +18,7 @@
         <p class="intro">Vous pourriez générer n'importe quel mot de passe en
             fonction de la taille ou des caractères que vous voulez utiliser.</p>
 
-        <form method="POST" action="">
+        <form method="POST" action="traitement.php">
             <div class="box">
                 <div class="form">
                     <p class="form">Générer un mot de passe</p>
@@ -24,19 +26,31 @@
                     <input type="number" name="longueur" min="12" max="20">
 
                     <p class="text">Cochez les cases pour choisir les paramètres de votre mot de passe :</p>
-                    <label class="text">Lettres <input type="checkbox" name="lettres" checked></label><br>
-                    <label class="text">Chiffres <input type="checkbox" name="chiffres" checked></label><br>
-                    <label class="text">Symboles <input type="checkbox" name="symboles" checked></label><br><br>
+                    <label class="text">Lettres <input type="checkbox" name="lettres"></label><br>
+                    <label class="text">Chiffres <input type="checkbox" name="chiffres"></label><br>
+                    <label class="text">Symboles <input type="checkbox" name="symboles"></label><br><br>
 
                     <button class="button">Envoyer</button>
                 </div>
             </div>
         </form>
 
-        <div class="resultat">
-            <p class="resultat">Voici votre mot de passe :</p>
-        </div>
+        <?php
+        // Affichage erreur
+        if (isset($_SESSION['erreur'])) {
+            echo '<p style="color:red;">' . htmlspecialchars($_SESSION['erreur']) . '</p>';
+            unset($_SESSION['erreur']);
+        }
 
+        // Affichage mot de passe généré
+        if (isset($_SESSION['motdepasse'])) {
+            echo '<div class="resultat">';
+            echo '<p>Voici votre mot de passe :</p>';
+            echo '<input type="text" value="' . htmlspecialchars($_SESSION['motdepasse']) . '" readonly>';
+            echo '</div>';
+            unset($_SESSION['motdepasse']);
+        }
+        ?>
 
     </main>
 
